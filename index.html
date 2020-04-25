@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{ msg }}
+        {{ null }}
+        {{ undifined}}
+    </div>
+    <script>
+        //vue使用插值表达式进行渲染，类型number,boolean string,array,object 可直接渲染
+        //挂载有两种，el和$mount()   区别：$mount为手动挂载，比如挂载前要做一些判断在进行挂载
+        const vm = new Vue({
+            el: '#app',
+            data: {
+                msg: '第一个vue实例'
+            }
+        });
+    </script>
+</body>
+
+</html>
